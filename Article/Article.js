@@ -12,16 +12,21 @@ class Article {
     let p = document.createElement("p");
     let span = document.createElement("span");
     span.textContent = "Expand";
+    let deleteSpan = document.createElement("span");
+    deleteSpan.textContent = "Delete section";
     h2.textContent = this.header;
     p.textContent = this.date;
     this.div.className += "article";
     p.className += "date";
     span.className += "expandButton";
+    deleteSpan.className += "expandButtonDelete";
     this.div.appendChild(h2);
     this.div.appendChild(p);
     this.div.appendChild(span);
+    this.div.appendChild(deleteSpan);
     
     span.addEventListener("click", () => this.expandArticle());
+    deleteSpan.addEventListener("click", () => this.deleteSpan());
     article_wrapper.appendChild(this.div);
     // this.addAllParagraph = this.addAllParagraph.bind(this);
     this.addAllParagraph(this.allParagraph);
@@ -43,13 +48,20 @@ class Article {
     // console.log(this.domElement);
   }
 
+  deleteSpan() {
+    // Using our reference to the domElement, toggle a class to expand or hide the article.
+    // this.domElement.classList.toggle("article-open");
+    this.div.remove();
+    // console.log(this.domElement);
+  }
+
   addAllParagraph(allParagraph){
-    allParagraph.forEach(function(pa){
+    allParagraph.forEach(pa => {
       let tempP = document.createElement("p");
       tempP.textContent = pa;
       this.div.appendChild(tempP);
       // console.log(this);
-    }.bind(this));
+    });
   }
 }
 

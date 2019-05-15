@@ -2,7 +2,7 @@
 // let article_wrapper = document.querySelector(".articles");
 
 class Article {
-  constructor(attributes) {
+  constructor(domElement) {
     // this.header = attributes.header;
     // this.date = attributes.date;
     // this.paragraph = attributes.paragraph;

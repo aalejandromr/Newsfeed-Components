@@ -71,25 +71,25 @@ new Article({
   date: "The Date",
   paragraph: "lorem lorem lorem",
   allParagraph: ["aslkdjalskdj kqwelqjwekq", "test2", "test3"]
-})
+});
 
 new Article({
   header: "Header 1",
   date: "The Date",
   paragraph: "lorem lorem lorem",
   allParagraph: ["test1", "test2", "test3"]
-})
+});
 
 new Article({
   header: "Header 1",
   date: "The Date",
   paragraph: "lorem lorem lorem",
   allParagraph: ["test1", "test2", "test3"]
-})
+});
 
 new Article({
   header: "Header 1",
   date: "The Date",
   paragraph: "lorem lorem lorem",
   allParagraph: ["test1", "test2", "test3"]
-})
+});
